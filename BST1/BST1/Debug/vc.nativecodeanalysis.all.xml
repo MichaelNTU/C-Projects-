@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+      <FILENAME>node1.cpp</FILENAME>
+      <LINE>114</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'node'. </DESCRIPTION>
+    <FUNCTION>BST::Node::removeRec</FUNCTION>
+    <DECORATED>?removeRec@Node@BST@@QAEXHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAPAV12@@Z</DECORATED>
+    <FUNCLINE>97</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>99</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>101</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>107</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>110</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>113</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>117</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>121</LINE>
+        <COLUMN>58</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>108</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'node' may be NULL (Continue this loop)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>110</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'noded-&gt;key==keys' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>113</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'keys&lt;node-&gt;key' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\visual studio 2015\projects\bst1\bst1\</FILEPATH>
+        <FILENAME>node1.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'node' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT></DEFECTS>

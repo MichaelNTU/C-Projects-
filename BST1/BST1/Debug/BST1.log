@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  Node1.cpp
+  BST1Main.cpp
+  BST1.cpp
+c:\visual studio 2015\projects\bst1\bst1\bst1.cpp(9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Running Code Analysis for C/C++...
+  Generating Code...
+  BST1.vcxproj -> C:\Visual Studio 2015\Projects\BST1\Debug\BST1.exe
+  BST1.vcxproj -> C:\Visual Studio 2015\Projects\BST1\Debug\BST1.pdb (Full PDB)
+c:\visual studio 2015\projects\bst1\bst1\node1.cpp(114): warning C6011: Dereferencing NULL pointer 'node'. 
