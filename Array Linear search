@@ -1,0 +1,32 @@
+// Array Linear Search.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+const int MAX=5;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	double Values[MAX] = {123,156,187,110,90};
+	int pos =0;
+	bool found= false;
+	cout<<"position of value 1 is true and 0 is false"<<endl;
+	while(pos<MAX && !found)
+	{
+		if(Values[pos]==110)
+		{
+			found = true;
+		}
+		else
+		{
+			pos++;
+		}
+		cout<<found<<endl;
+	}
+
+	return 0;
+}
