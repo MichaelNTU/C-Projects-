@@ -1,0 +1,31 @@
+// Array Maximum and Minimum.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+ //const int Values[2];
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int Values[5]={0,3,4,5,7};
+	int Largest  =0;
+	//int counter=0;
+
+	for( int i=1; i<Values[i]; i++)
+	{
+		//cout<<Values[i]<<endl;
+		//int Values[i];
+		if(Values[i]>Largest)
+		{
+			Largest = Values[i];
+			//counter++;
+			cout<<Largest<<endl;
+		}
+		//cout<<Values[0]<<endl;
+	}
+	return 0;
+}
