@@ -1,0 +1,36 @@
+// BMI Section2.cpp : Defines the entry point for the console application.
+//This is a BMI calculation in Metric Formula
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+	double wk;
+	double (hm2);
+
+
+	cout<<"Please enter weight in metres: "<< endl; // the prompt
+	cin>>wk; // they enter a sensible value (!)
+
+	cout<<"Please enter height in metres: "<<endl; // the prompt
+	cin>>hm2; // they enter a sensible value (!)
+
+	double BMI =wk/(hm2);
+	if (BMI<12)
+	{	
+		cout<<"Underweight"<<endl;
+	}
+	else if (BMI>25)
+	{
+		cout<<"Overweight"<<endl;
+	}
+	if ((BMI==12)||(BMI<25))
+	{
+		cout<<"Practically Perfect your BMI is"<<BMI<<endl;
+	}
+	return 0;
+
+}
