@@ -1,0 +1,30 @@
+// arrary Practice.cpp : Defines the entry point for the console application.
+//
+
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+const int CAPACITY = 9;
+double values[CAPACITY];
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int current_size = 0;
+	double input;
+	cout<<"Enter a value to arrary"<<endl;
+	while(cin>>input)
+	{
+		if(current_size < CAPACITY)
+		{
+			values[current_size]= input;
+			current_size++;
+		}
+	}
+	for(int i =0; i< current_size; i++)
+	{
+		cout<<values[i]<<endl;
+	}
+	return 0;
+}
