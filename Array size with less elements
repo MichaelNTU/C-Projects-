@@ -1,0 +1,21 @@
+// array.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int Mike[9];
+	cout<<"element       Value"<<endl;
+	for(int x =0; x<=8; x++)
+	{
+		int Mike[9]={90,35,50,40,39,49};
+		cout<<x<<"              "<<Mike[x]<<endl;
+	}
+
+	return 0;
+}
