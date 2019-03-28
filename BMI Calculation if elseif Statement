@@ -1,0 +1,32 @@
+// BMI Section2A.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	double wk = 12;
+	double hm2 = 25*2;
+
+
+	double BMI = wk/(hm2);
+	if (BMI<12)
+	{
+		cout<<"Underweight,BMI is"<<BMI<<endl;
+	}
+	else if (BMI>25)
+	{
+		cout<<"Overweight,BMI is"<<BMI<<endl;
+	}
+	else if ((BMI==12)||(BMI<25))
+	{
+		cout<<"Practically Perfect, BMI is"<<BMI<<endl;
+	}
+	else
+	{
+		cout<<"This is the end of the program"<<endl;
+	}
+	return 0;
+}
