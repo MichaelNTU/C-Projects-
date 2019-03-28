@@ -1,0 +1,58 @@
+// boolean practice.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	/*int num;
+	bool x = true;
+	cout<<"enter a number to decide wether even or odd"<<endl;
+	cin>>num;
+	if(num% 2!=0)
+		x = false;
+	if(x)
+		cout<<"this number is even"<<endl;
+	else
+		cout<<"this number is odd"<<endl;*/
+	int Tem=0;
+	bool status =false;
+	status=true;
+	int count = 0;
+	while(count<10)
+	{
+		cout<<"Please Enter room number 1 - 5 for booking "<<"  :";
+		cin>>Tem;
+		if(Tem >= 18)
+		{
+		cout<<"under Tem"<<endl<<endl;
+		status=true;
+		}
+		else
+		{
+		if(Tem < 18)
+		{
+		cout<<"Top Tem"<<endl;
+		status=true;
+		}
+		}
+		count++;
+	}
+	//return Tem;*/
+	/*int z1;
+	bool boolean;
+	cout<<"Better Z1:";
+	cin>>z1;
+	if(z1 <= 10 && z1 >=1)
+		boolean = true;
+	else
+		boolean = false;
+	cout<<"Better"<<z1<<"ok"<<((z1 <= 10 && z1 >=1)? "what" : "who")<<endl;
+
+	system("pause");*/
+	return 0;
+}
