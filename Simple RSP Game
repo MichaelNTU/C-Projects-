@@ -1,0 +1,50 @@
+// Exercise 3 Game Secttion 2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "math.h"
+#include <iostream>
+using namespace std;
+
+int getInput(int Player)
+{
+	int temp=0;
+	while(temp<1||temp>3)
+	{
+		cout<<"Enter val for player number "<<Player<<"   :";
+		cin>>temp;
+	}
+	return temp;
+}
+int _tmain(int argc, _TCHAR* argv[])
+{
+	cout<<"This is a simple game play by two players"<<endl;
+	cout<<"The players will choose from three option 1 for scissors, 2 for paper and 3 for storn"<<endl;
+	cout<<"The players will enter the number representing these options"<<endl;
+	cout<<"in the end there will be winner either player1 or Player2"<<endl;
+	
+	int scissors = 1; // This is an integer varaible for scissors
+	int paper = 2; // This is an integer varaible for paper
+	int storn = 3; // This is an integer varaible for storn
+	int player1;
+	int player2;
+	int gameon=0;
+	int number;
+
+	
+		player1=getInput(1);
+		player2=getInput(2);
+
+		//who won?
+		if (player1==player2)
+		{
+			cout<<"a draw";
+		}
+		else
+		{
+			cout<<"Someone won the game"<<endl;
+		}
+
+
+	return 0;
+}
