@@ -1,0 +1,12 @@
+// Ffig 1.2 practice.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream> // allow program to output data on the screen
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	cout<<"Welcome \n to\n \n C++!\n"; // display message
+	return 0;
+}
