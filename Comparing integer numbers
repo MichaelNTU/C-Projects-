@@ -1,0 +1,39 @@
+// Fig 2.13 Comparing integer numbers.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int number1;// First number to compare
+	int number2;// Second number to compare
+
+	cout<<"Enter numbers to compare:"; // prommt user data
+	cin>>number1;//read integer from the user
+	cout<<"Enter numbers to compare:"; // prommt user data
+	cin>>number2; //read integer from the user
+
+	if (number1==number2)
+		cout<<number1<< "=="<<number2<<endl;
+
+	if (number1!=number2)
+		cout<<number1<< "!="<<number2<<endl;
+
+	if (number1<number2)
+		cout<<number1<< "<"<<number2<<endl;
+
+	if (number1>number2)
+		cout<<number1<< ">"<<number2<<endl;
+
+	if (number1<=number2)
+		cout<<number1<< "<="<<number2<<endl;
+
+	if (number1>=number2)
+		cout<<number1<< ">="<<number2<<endl;
+
+	return 0;//indicate that program ended successfully
+}// end of function main
