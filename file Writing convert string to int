@@ -1,0 +1,44 @@
+ file Writing.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	/*ofstream myfile;
+	cout<<"Enter the room for booking:"<<" ";
+	string filetext;
+	cin>>filetext;
+	myfile.open("Takebooking.txt");
+	myfile<<filetext;
+	myfile.close();
+	cin.clear();*/
+
+	/*ofstream myfile;
+	string filetext;
+	cout<<"Enter the room for booking:"<<" ";
+	cin>>filetext;
+	myfile.open("Takebooking.txt");
+	myfile<<filetext;
+	myfile.close();*/
+	int a;
+	ifstream myfile;
+	string ss;
+	//read int from file
+	myfile >> a;
+	//read int from string
+	//string ss;
+	//ss << a;
+	//ss >> a;
+	//'convert' string to int:
+	a = atoi(ss.c_str());
+	cout << "a is" <<a<< endl;
+	return 0;
+}
