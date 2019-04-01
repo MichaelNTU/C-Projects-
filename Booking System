@@ -1,0 +1,112 @@
+// final copy hotel reservation project.cpp : Defines the entry point for the console application.
+//
+#pragma once
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+const int MAXROOMS = 5;
+
+
+struct Rooms
+{
+	string Name,Funiture,Electronic;
+	int RoomSN,Price;
+	bool status;
+
+};
+int getbooking(int RoomNum)
+{
+	//bool status =true;
+	int Tem=0;
+	while(Tem<1|| Tem>5)
+	{
+		cout<<"Please Enter room number 1 - 5 for booking "<<"  :";
+		cin>>Tem;
+	}
+	return Tem;
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	Rooms MyRoom[MAXROOMS];
+	
+	// read Students from file
+	ifstream inFile("Rooms.txt"); // declare an object for handling 
+	if (!inFile)
+	{
+		cout<<"file is not here"<<endl;
+		return 1; // early exit 
+	}
+	// read Rooms from the file
+	for (int i=0;   i<MAXROOMS;    i++)
+	{
+		inFile>>MyRoom[i].Name>>MyRoom[i].Funiture>>MyRoom[i].Electronic>>MyRoom[i].RoomSN>>MyRoom[i].Price;
+
+	}
+	inFile.close();
+
+	// display a header line -  
+	cout<<"     Name"<<"       Funiture"<<"        Electronic"<<"     RoomSN"<<"  Price"<<"   "<<endl;
+	for (int i=0;   i<MAXROOMS;    i++)
+	{
+		cout<<setfill(' ')<<setw(10)<<MyRoom[i].Name;
+		cout<<setfill(' ')<<setw(14)<<MyRoom[i].Funiture;
+		cout<<setfill(' ')<<setw(16)<<MyRoom[i].Electronic;
+		cout<<setfill(' ')<<setw(10)<<MyRoom[i].RoomSN;
+		cout<<setfill(' ')<<setw(7)<<MyRoom[i].Price;
+		cout<<setfill(' ')<<setw(7)<<MyRoom[i].status;
+		cout<<endl;
+		
+		
+	}
+
+	for (int i=0;   i<MAXROOMS;    i++)
+	{
+		int RoomNum1;
+		int RoomNum2;
+		int RoomNum3;
+	RoomNum1= getbooking(1);
+	RoomNum2= getbooking(2);
+	RoomNum3= getbooking(3);
+		if(RoomNum1==true)
+	{
+		cout<<" Room Name: "<<MyRoom[i].Name<<" and Number "<<MyRoom[i].RoomSN<<" of the price:"<<MyRoom[i].Price<<" Is not available,enter number to book";
+	}
+		else
+		{
+			cout<<"Room is available enter Number for booking:"<<"  ";
+		}
+		
+		cin>>RoomNum1;
+		if(RoomNum1==RoomNum2)
+		{
+			cout<<" Your have succesfully book a Room"<<endl;
+		}
+
+		if(RoomNum2==false)
+	{
+		cout<<" Room Name: "<<MyRoom[i].Name<<" and Number "<<MyRoom[i].RoomSN<<" of the price:"<<MyRoom[i].Price<<" Is available for booking";
+	}
+		cin>>RoomNum2;
+		if(RoomNum2==RoomNum3)
+		{
+			cout<<" Your have succesfully book a Room"<<endl;
+		}
+	}
+
+	ofstream outfiles;
+	outfiles.open("booking.txt");
+	for (int i=0; i<MAXROOMS;i++)
+	{
+		outfiles<<MyRoom[i].Name<<"  "<<MyRoom[i].Funiture<<"  "<<MyRoom[i].Electronic<<"  "<<MyRoom[i].RoomSN<<MyRoom[i].Price<<endl;
+	}
+	outfiles.close();
+
+
+	return 0;
+}
