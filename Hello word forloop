@@ -1,0 +1,18 @@
+// forloop.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<string>
+#include <iostream>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{	
+	int n=0;
+	for(int n=0; n<10; n++)
+	{
+		cout<<"Hello Word"<<endl;
+	}
+	return 0;
+}
