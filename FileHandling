@@ -1,0 +1,67 @@
+// FileHandling2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string> 
+#include <fstream>
+using namespace std;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	ifstream Infile;
+	ofstream oufile;
+	string First_Name;
+	string Last_Name;
+	string Room_Type;
+	string Menu_Type;
+	string n = "n";
+	int Age = atoi(n.c_str());
+	Infile.open("RoomFile.txt");
+	oufile.open("RecordFile.txt");
+	
+	cout << "Please Enter First Name:" << endl;
+	cin >> First_Name;
+	cout << "Please Enter Last Name:" << endl; 
+	cin >> Last_Name;
+	do
+	{
+		cout << "Please Enter Room Type:" << endl;
+		cin >> Room_Type;
+
+	} while ((Room_Type != "Brompton") && (Room_Type != "GrandRoom") && (Room_Type != "ClubRoom") && (Room_Type != "Executive"));
+
+	cout << "Please Enter Menu Type:" << endl;
+	cin >> Menu_Type;
+	
+	do
+	{
+	cout<<"Please Enter your Age between 1 and 120" << endl;
+	cin >> Age;
+
+	} while (Age>120);
+	
+	while (!Infile.eof()&& !oufile.eof())
+		{
+		Infile >> First_Name >> Last_Name >> Room_Type >> Menu_Type>> Age;
+		oufile<< "*********BOOKING CONFIRMATION*********" << endl;
+		oufile <<"First_Name     Last_Name     Room_Type     Menu_Type          Age" << endl;
+		oufile << First_Name << "           " << Last_Name << "         " << Room_Type << "         " << Menu_Type<<"        "<< Age;
+		cout << "*********BOOKING CONFIRMATION*********" << endl;
+		cout << "First_Name is:  "<< First_Name << endl;
+		cout << "Last_Name  is:  "<< Last_Name << endl;
+		cout << "Room_Type  is:  "<< Room_Type << endl;
+		cout << "Menu_Type  is:  "<< Menu_Type << endl;
+		cout<<  "Age        is:  "<<Age<< endl; break;
+
+		}
+		Infile.close();
+		oufile.close();
+		
+	system("Pause");
+	
+
+	return 0;
+}
