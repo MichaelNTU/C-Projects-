@@ -1,0 +1,25 @@
+// Functions Practice.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip> // only used to tidy up the console output here
+#include <fstream> // added file handling
+#include <string>
+using namespace std;
+
+double Addition(int x,int y,int a)
+{
+	int z;
+	 z =x*y*a;
+	return z;
+}
+
+int main()
+{
+	int i;
+	i =  Addition(4.4, 3.3, 4.6);
+	cout<<"The value of I is:"<<i<<endl;
+	return 0;
+}
