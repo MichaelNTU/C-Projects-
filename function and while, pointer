@@ -1,0 +1,43 @@
+// practics while array3.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int arraysize = 5; 
+    int* a = new int[arraysize]; 
+    int n = 0; 
+   
+    cout << "Enter a list of nonnegative integers. \n"       
+         << "Place a negative integer after the list.\n";   
+                                                               
+    do
+    {
+	while (cin >> a[n])   
+        { 
+        cout << n << "\n"; cout << "a[n]=" << a[n] << endl;
+        //The above line of code demonstrates what's happening.    
+	n++; 
+            if (n >= arraysize) 
+            {
+                arraysize = arraysize * 2; 
+                int* temp = new int[arraysize]; 
+                
+                    for (int shifter=0; shifter<n; shifter++) 
+                    {
+                        temp[shifter] = a[shifter]; 
+                    }
+        
+                delete [] a; 
+                a = temp; 
+            }
+        }
+     }while (a[n] >= 0);   //this loop is not terminating.  WHY??????
+                                      //Is there an equivalent statement that would work?
+	return 0;
+}
