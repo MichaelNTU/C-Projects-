@@ -1,0 +1,30 @@
+// practice example.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+bool isleapYear(int y)
+{
+	// returns true if y is a leap year:
+	return y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
+}
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int n;
+	do
+	{ cout<<" Enter the room number to book"<<endl;
+		cin>>n;
+		if(isleapYear(n))
+			cout<<n<<" The room is avalaible to be book.\n";
+		else cout <<n<<" The room is not avalaible for booking.\n";
+	}
+	while (n>1);
+	// returns true iff y is a leap year;
+
+	return 0;
+}
