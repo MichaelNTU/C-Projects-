@@ -1,0 +1,23 @@
+// Section2 Program2.cpp : Defines the entry point for the console application.
+// This program is to convert ounces to grams
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int n;
+	int ounces = 28;
+	int value; 
+
+	for(n=0;n<5;n++)
+	{
+		cout<<"Please enter your value of ounces for convertion to grams"<<endl;
+		cin>>value;
+		cout<<value*ounces<<endl;
+	}
+
+	return 0;
+}
