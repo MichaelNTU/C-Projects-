@@ -1,0 +1,27 @@
+// section2 Program3.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdafx.h"
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	double Dollar = 0;
+	double Pounds = 0.7;
+	
+	cout<<"DOLLARS"<<"         "<<   "RATE"  <<"    " <<"POUNDS"<<endl;
+	while(Dollar<11)
+	{
+		
+		cout<<"$"<<Dollar<<"\t"<<"X"<<"\t"<<Pounds<<"="<<"\t"<<"£"<<Dollar*Pounds<<endl;
+		if(Pounds>10)break;
+		Dollar++;
+	}
+	cout<<"This is the end of the program"<<endl;
+
+	return 0;
+}
