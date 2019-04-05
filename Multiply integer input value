@@ -1,0 +1,52 @@
+// Section2 Program2c.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	//double n=3;
+	//int y=28;
+
+	//for(double n=0; n<10; n++)
+	//{
+	//	int y=0;
+	//	cout<<"Enter val:";
+	//	cin>>y;
+	//	while(y>28)
+	//	
+	//	cout<<y<<""<<"x"<<"7"<<"=";
+	//		cout<<n*7<<endl;
+	//	++y;
+	//	
+	//	//cout<<n*7<<endl;
+	//}
+
+	/*for(int n=0,y=0; y<10,n<10; y++,n++)
+	{
+		cout<<y<<"x"<<"7"<<"="<<n*7<<endl;
+	}*/
+
+	/*int i,j;
+	for (i=0;i<5;i++)
+	{
+		for(j=0;j>10;j++)
+		{
+			cout<<j<<endl;
+		}
+		cout<<"i ="<<i<<endl;
+	}*/
+
+	int i;
+	int n=0;
+	cout<<"Enter Number for Multiplication:";
+	cin>>n;
+	for (i=0;i<10;i++)
+	{
+		cout<<i<<"x"<<n<<" = "<<i*n<<endl;
+	}
+	return 0;
+}
