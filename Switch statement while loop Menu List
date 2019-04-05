@@ -1,0 +1,63 @@
+// Section2 Program4.cpp : Defines the entry point for the console application.
+// This program is to display 7 times table (1 till 10)for the first part, and then 'N' table where N is a number 
+
+#include "stdafx.h"
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int choice;
+	double num1 = 0;
+	double num2 = 0;
+	double value = 0;
+
+	
+	cout<<" TIMES TABLE FOR N "<<endl;
+
+
+    cout<<"		Make a selction:"<<endl;
+    cout<<"	1.	7 Times Table"<<endl;
+	cout<<"	2.	Times Table for N"<<endl;
+    cout<<"		YOUR CHIOCE IS: ";
+    cin>>choice;
+    switch(choice)
+	{
+	case 1:
+	while(num1<11)
+	{
+		cout<<"enter number for 7 times tables"<<endl;
+		cin>>num1;
+		cout<<" "<<num1<<"X"<<7<<"="<<num1*7<<endl;
+		cin.ignore();
+		if(num1>10)break;
+		num1++;
+	}
+			
+	case 2:
+
+	while(num2<11)
+	{
+		cout<<"enter any value for times tables"<<endl;
+		cin>>value;
+		if(value==0)break;
+		cout<<" "<<num2<<"X"<<value<<"="<<num2*value<<endl;
+		cin.ignore();
+		if(num2>10)break;
+		num2++;
+
+	}
+	
+default:
+	
+
+cout<<"Invalid Entry!, BYE!!!"<<endl;
+cin.ignore();
+	return 0;
+
+}
+
+}
