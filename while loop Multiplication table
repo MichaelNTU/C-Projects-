@@ -1,0 +1,24 @@
+// section2 Program2d.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int y=28;
+	double x=0;
+
+	while(x<11)
+	{
+		cout<<x<<"X"<<y<<"="<<x*y<<endl;
+		x++;
+	}
+	cout<<"This is the end of the program"<<endl;
+
+	
+	return 0;
+}
