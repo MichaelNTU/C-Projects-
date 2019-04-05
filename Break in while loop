@@ -1,0 +1,29 @@
+// Section2 Program5.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	double age =18;
+	double years =0;
+
+	while(age<40)
+	{
+		for(double years=10; years < 50; years +=10)
+		{
+			if((age<18)||(age>40))break;
+			cout<<"enter your age"<<endl;
+			cin>>age;
+			age++;
+			cout<<years<<endl;
+		}
+		cout<<" "<<age<<years<<age*years/12<<endl;
+	}
+	
+	return 0;
+}
