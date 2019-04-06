@@ -1,0 +1,53 @@
+// Section2D If Conditions.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int a=2; // Declare the first variable
+	int b=4; // Declare the second variable
+	int c=6; //Declare the third variable
+	int d=8; // Declare the furth variable
+
+	if ((a=2)&&(b<3))
+	{
+		cout<<"True"<<endl;
+	}
+	else 
+	{
+		cout<<"False"<<endl;
+	}
+	 if  ((a!=3)&&(b>2))
+	{
+		cout<<"True"<<endl;
+	}
+	else 
+	{	
+		cout<<"False"<<endl;
+	}
+	 if ((c<7)||(c>9))
+	{
+		cout<<"True"<<endl;
+	}
+	else 
+	{
+		cout<<"False"<<endl;
+	}
+	 if ((c>6)||(d<=10))
+	{
+		cout<<"True"<<endl;
+	}
+	 else
+	{
+		cout<<"False"<<endl;
+	 } 
+	
+	  cout<<"a,b,c,d"<<a<<b<<c<<d<<endl;
+	
+
+	return 0;
+}
