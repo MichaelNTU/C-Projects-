@@ -1,0 +1,65 @@
+// Session1.cpp : Defines the entry point for the console application.
+//This is a line of comment
+
+#include "stdafx.h"
+#include <Windows.h>
+#include <iostream>
+using namespace std;
+
+double BMI(double weight, double height)
+{
+	return weight/(height*2);
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+	int weight =0;
+	double height;
+	double Answer;
+	double bmi;
+	Answer=0;
+	bmi = Answer;
+	weight = weight+9.5;
+	height = 0;
+
+	cout<<"Enter weight"<<endl;
+	cin>>weight;
+	cout<<"Enter height"<<endl;
+	cin>>height;
+	Answer=BMI(weight,height);
+	if(bmi<12)
+	{
+		cout<<"BMI check is Uderweight"<<endl;
+	}
+	else
+	{
+		cout<<"BMI less than 12"<<endl;
+	}
+	
+	 if(bmi>25)
+	{
+		cout<<"BMI check is Overweight"<<endl;
+	}
+	 else
+	 {
+		 cout<<"BMI is less than 25"<<endl;
+	 }
+	
+	if((bmi>12)||(bmi<25))
+	{
+		cout<<"BMI check is Pratically Perfect"<<endl;
+	}
+	else
+	{
+		cout<<"BMI is Okay"<<endl;
+	}
+
+
+
+
+	
+
+		return 0;
+
+}
