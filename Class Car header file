@@ -1,0 +1,20 @@
+#pragma once
+#include <string>
+using namespace std;
+
+class Car
+{
+public:
+	// see later for the bodies of the functions!
+	Car(string mName, string reg, double eng, double pri);
+	Car();
+	void Load(ifstream& carFile);
+	void Save(ofstream& CarFile);
+	void Display();
+	double Ratio(); //how much it costs per cc of engine!
+private:
+	string ModelName;
+	string Registration;
+	double EngineSize;
+	double Price;
+};
