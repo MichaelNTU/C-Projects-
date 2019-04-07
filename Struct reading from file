@@ -1,0 +1,116 @@
+// Session7.cpp : Defines the entry point for the console application.
+//using struct
+// reading from file
+// using functions
+
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip> // only used to tidy up the console output here
+#include <fstream> // added file handling
+#include <string>
+using namespace std;
+
+const int MAXCARS =5; //Always use this instead of magic numbers in code!
+
+// Note how Car only includes the items for a SINGLE car
+struct Car
+{
+	string ModelName;
+	string Registration;
+	double EngineSize;
+	double Price;
+};
+
+// FUNCTIONS!
+int FindMostExpensive(Car List[], int NumCars); 
+
+int LoadCars(Car List[], int NumCars, string CarFileName);
+
+int DisplayCarData(Car List[], int NumCars);
+
+int main()
+{
+	// note now a SINGLE array of Car, NO LONGER initialised 
+	Car ListCars[MAXCARS];
+	int NumCars =0;
+	// call the function and exit if it went wrong - could return different numbers for different reasons
+	if (LoadCars (ListCars, MAXCARS, "cars.txt")==1) return 1;
+	if(FindMostExpensive(ListCars,NumCars)==1) return 1;
+
+	int IndexMostExpensive;
+	double PriceMostExpensive;
+	// initialise to the details of first in array
+	IndexMostExpensive=0;
+	PriceMostExpensive = ListCars[IndexMostExpensive].Price;
+
+	// display a header line - note use of \t for tabs to try to line up - not successful, but I'm not bothered 
+	cout<<"Model"<<"\t\tReg Num"<<"\tPrice"<<"\tEngine Size"<<endl;
+	// note use here of iomanip functions to set the width of EACH field (eg 10 chars) and filling the spare with ' '
+	// this makes for a nicer alignment than the commented out line which gets messed up by the Lamborghini gallardo
+	for (int i=0;   i<MAXCARS;    i++)
+	{
+		//cout<<ModelName[i]<<"\t"<<Registration[i]<<"\t"<<Price[i]<<"\t"<<EngineSize[i]<<endl;
+		cout<<setfill(' ')<<setw(10)<<ListCars[i].ModelName;
+		cout<<setfill(' ')<<setw(10)<<ListCars[i].Registration;
+		cout<<setfill(' ')<<setw(10)<<ListCars[i].Price;
+		cout<<setfill(' ')<<setw(10)<<ListCars[i].EngineSize;
+		cout<<endl;
+
+
+
+		// now find out of this car is the most expensive
+		//int tem;
+		//if(FindMostExpensive(Car List[],int NumCars)==0);
+		//if (ListCars[i].Price>PriceMostExpensive)
+		//{
+		//	IndexMostExpensive =i;			//update this index
+		//	PriceMostExpensive = ListCars[i].Price; //update this price
+		//}
+	}
+
+	// gone through all the cars.
+	// now can display details about most expensive car
+	cout<<"Car is "<<ListCars[IndexMostExpensive].ModelName<<" at a price of "<<ListCars[IndexMostExpensive].Price<<endl;
+	cout<<"With reg num of "<<ListCars[IndexMostExpensive].Registration<<" and engine size of "<<ListCars[IndexMostExpensive].EngineSize<<endl;
+	return 0;
+}
+int IndexMostExpensive;
+double PriceMostExpensive;
+
+int FindMostExpensive(Car List[], int NumCars)
+{	// add code here
+	
+	double tem =0;
+	if(IndexMostExpensive>tem)
+	tem = IndexMostExpensive;
+	IndexMostExpensive = PriceMostExpensive; //update this index
+	
+	return IndexMostExpensive; //should be index of Most expensive
+}
+int DisplayCarData(Car List[], int NumCars, int MAXCARS)
+{
+	for (int i=0;   i<MAXCARS;    i++)
+	{
+		cout<<IndexMostExpensive<<endl;
+
+	}
+	return IndexMostExpensive;
+}
+
+int LoadCars(Car List[], int NumCars, string CarFileName)
+{
+	// read cars from file specified as parameter
+	ifstream inFile(CarFileName); // declare an OBJECT for handling file input and associate it with the cars.txt file
+	if (!inFile)
+	{
+		cout<<"Oh dear, your file is not here"<<endl;
+		return 1; //an error - return a value to indicate this
+	}
+	// read Cars from the file up to number specified into array provided
+	for (int i=0;   i<NumCars;    i++)
+	{
+		inFile>>List[i].ModelName>>List[i].Registration>>List[i].EngineSize>>List[i].Price;
+	}
+	inFile.close();
+	return 0;
+}
