@@ -1,0 +1,55 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+const int NMAX =6;
+
+//ALTERNATIVE IMPLEMENTATION - from Lecture notes
+//Repeat
+//      Set swapped flag to false
+//      For array index i from 0 to N-2
+//           If array[i]>array[i+1]
+//               Swap elements i and i+1
+//               Set swapped flag to true
+//      End for loop
+//Until swapped flag is false
+
+struct Student
+{
+	int ID;
+	double Mark;
+};
+
+int main()
+{
+	Student MyClass[NMAX] = {{4600, 45.5}, {1503, 76.0}, {2642, 59.0}, {8880, 37.0}, {5268, 85.0}, {7391, 62.5}};
+	bool swappedFlag = true;
+	int counter =0;
+	
+	while (swappedFlag)
+	{
+		swappedFlag=false; // for this cycle through all the array
+		for (int j=0; j<NMAX-1; j++)
+		{
+			Student temp;
+			counter ++; // Compare 2 values - increment a counter here
+			if (MyClass[j].Mark>MyClass[j+1].Mark)
+			{
+				temp=MyClass[j];
+				MyClass[j]= MyClass[j+1];
+				MyClass[j+1]= temp;
+				swappedFlag=true;
+				counter++;//increment a swap counter here
+			}
+		}
+	}
+
+	// display the sorted array:
+	cout<<"ARRAY CONTENTS SORTED, IMPLEMENTATION2"<<endl;
+	for (int i=0; i<NMAX; i++)
+	{
+		cout<<"ID :"<<" "<<MyClass[i].ID<<"   "<<"Mark :"<<" "<<MyClass[i].Mark<<endl;
+	}
+	cout<<swappedFlag<<endl;//Display the values of the counter after the whole sort
+	return 0;
+}
