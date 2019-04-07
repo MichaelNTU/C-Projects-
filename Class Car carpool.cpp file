@@ -1,0 +1,69 @@
+#include "carpool.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+CarPool::CarPool(string Reg)
+{
+	countCars=0; //for now
+	Reg;
+}
+CarPool::CarPool()
+{
+
+}
+
+CarPool::~CarPool()
+{
+	if (countCars>0)
+	{
+		delete [] ptrToPool;
+	}
+}
+
+int CarPool::Load(string fromFilename)
+{
+	// assumes file starts with count of cars
+	ifstream inFile(fromFilename);
+	if (!inFile)
+	{
+		return -1; //oh dear no file to read
+	}
+	inFile>>countCars; //read the following number of cars
+	ptrToPool = new Car[countCars];
+	for (int i=0; i<countCars; i++)
+	{
+		ptrToPool[i].Load(inFile);
+	}
+	return 0; //successful!
+}
+
+int CarPool::Save(string toFilename)
+{
+	return 0; //successful!
+}
+
+void CarPool::Display()
+{
+	// put out header, then call cars to display themselves
+	cout<<"Model         Reg        Engine    Price"<<endl;
+	// now run their functions
+	for (int i=0;i<countCars;i++)
+	{
+		ptrToPool[i].Display();
+	}
+}
+
+int CarPool::getCount()
+{
+	return countCars;
+}
+
+bool CarPool::isPresent(string Reg)
+{
+	for (int i=0;i<countCars;i++)
+	{
+		//if(countCars[i].);
+	}
+	return true; //if found that registration?
+}
