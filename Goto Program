@@ -1,0 +1,32 @@
+// UsingGoto.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <iomanip>
+using std::left;
+using std::setw;
+
+int main()
+{
+	int count = 1;
+
+start: // label 
+	   // goto end when count exceeds 10
+	if (count > 10)
+		goto end;
+
+	cout << setw(2) << left << count;
+	++count;
+
+	// goto start on line 17
+	goto start;
+
+end: // label
+	cout << endl;
+
+	return 0;
+}
