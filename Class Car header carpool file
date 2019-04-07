@@ -1,0 +1,23 @@
+#pragma once
+#include "stdafx.h"
+#include <string>
+#include "car.h"
+
+class CarPool
+{
+public:
+	
+	CarPool(string Reg);
+	CarPool();
+	~CarPool();
+	int Load(string fromFilename);
+	int Save(string toFilename);
+	void Display();
+	int getCount();
+	bool isPresent(string Reg);
+	int  Sort();
+private:
+	Car* ptrToPool;
+	int countCars;
+	string Reg; 
+};
