@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int pollution_level[11];
+	int average=0;
+	int counter =0;
+
+	
+	while (counter<10)
+	{
+		cout<<"Enter pollution level for day "<<counter<<" range (1-100): ";
+		cin>>pollution_level[counter];
+		average = average + pollution_level[counter];
+		counter++;
+		//cout<< "The average pollution level over those 11 days was :"<<average/11<<endl;
+		
+	}
+	cout<<endl;
+	cout<< "The average pollution level over those 11 days was :"<<average/ pollution_level[counter] <<endl;
+	
+
+	
+	return 0;
+}
