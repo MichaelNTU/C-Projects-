@@ -1,0 +1,43 @@
+#pragma once
+#include "car.h"  // put the related header at the TOP of the list of includes
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+Car::Car(string mName, string reg, double eng, double pri)
+{
+	// store the parameter values for this object private data
+	 ModelName = mName;
+	 Registration = reg;
+	 EngineSize = eng;
+	 Price = pri;
+}
+
+Car::Car()
+{
+	// set up a value that shows the data not properly loaded
+	ModelName = "Unspecified";
+}
+
+void Car::Load(ifstream& carFile)
+{
+	carFile>>ModelName>>Registration>>EngineSize>>Price;
+		
+}
+
+void Car::Save(ofstream& carFile)
+{
+	//write the body here - remember to add spaces and endl
+}
+void Car::Display()
+{
+	cout<<setfill(' ')<<setw(10)<<ModelName<<setfill(' ')<<setw(10)<<Registration;
+	cout<<setfill(' ')<<setw(10)<<EngineSize<<setfill(' ')<<setw(10)<<Price<<endl;
+}
+
+double Car::Ratio() //how much it costs per cc of engine!
+{
+	return EngineSize/Price;
+}
