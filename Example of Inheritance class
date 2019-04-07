@@ -1,0 +1,119 @@
+// Session12A.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+class unit
+{
+public:
+	unit(string aName, string anID, string aClassification);
+	virtual ~unit();
+	bool Move(int xCoord, int yCoord);
+	void virtual DisplayUnit();
+	void virtual DisplayActions();
+
+protected:
+	string Name, ID, Classification;
+	int locX, locY;
+	int health, status;
+};
+
+class LowLevelUnit: public unit
+{
+public:
+	LowLevelUnit(string aName, string anID, string aClassification, int myHappiness, int myDefence);
+	virtual~LowLevelUnit();
+	void virtual DisplayActions();
+	bool Explore();
+	bool Frolic();
+protected:
+	int happiness;
+	int defence;
+};
+class Pikachu: public LowLevelUnit 
+{
+
+};
+
+
+int main()
+{
+
+	//declare things normally
+	unit aUnit("A", "UN001", "Fred");
+	LowLevelUnit bUnit("B", "UN001", "Jim", 10, 100);
+
+	aUnit.DisplayActions();
+	bUnit.DisplayActions();
+
+	unit* oneunit = new unit("Unit One", "UN003", "Earth");
+	unit* llunit = new LowLevelUnit("Pichu", "UN004", "Lightning", 10, 100);
+
+	oneunit->DisplayActions();
+	llunit->DisplayActions();
+
+	delete oneunit;
+	delete llunit;
+
+	return 0;
+}
+
+unit::unit(string aName, string anID, string aClassification)
+{
+	Name = aName;
+	ID = anID;
+	Classification = aClassification;
+}
+
+unit::~unit()
+{
+	cout<<"Destroying unit "<<Name<<endl;
+}
+
+bool unit::Move(int xCoord, int yCoord)
+{
+	locX = xCoord;
+	locY = yCoord;
+	return true;
+}
+
+void unit::DisplayUnit()
+{
+	cout<<Name<<" "<<Classification<<endl;
+}
+
+void unit::DisplayActions()
+{
+	cout<<"Emote, Interact "<<endl;
+}
+
+LowLevelUnit::LowLevelUnit(string aName, string anID, string aClassification, int myHappiness, int myDefence)
+	:unit(aName, anID, aClassification)
+{
+	happiness=myHappiness;
+	defence=myDefence;
+}
+
+LowLevelUnit::~LowLevelUnit()
+{
+	cout<<"Destroying llunit "<<Name<<endl;
+}
+
+//overrides the base class version
+void LowLevelUnit::DisplayActions()
+{
+	cout<< "Frolic, Explore"<<endl;
+}
+
+bool LowLevelUnit::Explore()
+{
+	return true;
+}
+
+bool LowLevelUnit::Frolic()
+{
+	return true;
+}
