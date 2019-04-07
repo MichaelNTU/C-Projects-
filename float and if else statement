@@ -1,0 +1,50 @@
+// Session2.cpp : Defines the entry point for the console application.
+// Program to test "if else"
+
+#include "stdafx.h"
+#include <Windows.h>
+//the follwing 2 lines are necessary to include the library for displaying to a console window
+#include <iostream>
+using namespace std;
+
+//this is the start of the main function. Note that I have used a simpler version than in last week's lab.
+//The version last week is part of the way to allow for unicode
+
+int main()
+{
+	int aInt = 5;			//note the semicolon!
+	float bFloat = 3.6;
+	//SYNTAX (as covered in lecture) – if/else example:
+	if (bFloat==3.6f)
+	{
+		cout<<"Hooray 3.6 found"<<endl;
+	}
+	else
+	{
+		cout<<"aInt is"<<aInt<<endl;
+	}
+	aInt = 200;
+	 if (aInt<10)
+	{
+		cout<<"Too Low"<<endl;
+	}
+	 else
+	 {
+		 cout<<"Too High"<<endl;
+	 }
+	 if (aInt>200)
+	{
+		cout<<"false"<<endl;
+	}
+	 else  //(aInt <20)
+	 {
+		cout<<"True"<<endl;
+	 }
+	//you will add assignment statements here
+
+	// you will add the if/else here
+
+	cout<<"This is the end of the program Bye"<<endl;
+
+	return 0;
+}
