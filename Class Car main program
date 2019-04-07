@@ -1,0 +1,15 @@
+// Session10.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include "carpool.h"
+
+
+int main(int argc, char* argv[])
+{
+	CarPool mycarpool;
+	Car mycars;
+	mycarpool.Load("carpool.txt");
+	mycarpool.Save("Carfile.txt");
+	mycarpool.Display();
+	return 0;
+}
