@@ -1,0 +1,40 @@
+// AnonymousUnionType.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	// declare an anonymous union                                
+	// members integer1, double1 and charPtr share the same space
+	union
+	{
+		int integer1;
+		double double1;
+		char *charPtr;
+	};  // end anonymous union                                   
+
+		// declare local variables
+	int integer2 = 1;
+	double double2 = 3.3;
+	char *char2Ptr = "Anonymous";
+
+	// assign value to each union member
+	// successively and print each
+	cout << integer2 << ' ';
+	integer1 = 2;
+	cout << integer1 << endl;
+
+	cout << double2 << ' ';
+	double1 = 4.4;
+	cout << double1 << endl;
+
+	cout << char2Ptr << ' ';
+	charPtr = "union";
+	cout << charPtr << endl;
+
+	return 0;
+}
