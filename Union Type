@@ -1,0 +1,35 @@
+// UnionType.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+// define union Number 
+union Number
+{
+	int integer1 = 40;
+	double double1;
+};  // end union Number
+
+int main()
+{
+	Number value; // union variable
+
+	value.integer1 = 100; // assign 100 to member integer1
+
+	cout << "Put a value in the integer member\n"
+		<< "and print both members.\nint:   "
+		<< value.integer1 << "\ndouble: " << value.double1
+		<< endl;
+
+	value.double1 = 100.0;  // assign 100.0 to member double1
+
+	cout << "Put a value in the floating member\n"
+		<< "and print both members.\nint:   "
+		<< value.integer1 << "\ndouble: " << value.double1
+		<< endl;
+
+	return 0;
+}
