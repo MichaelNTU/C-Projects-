@@ -1,0 +1,17 @@
+﻿  stdafx.cpp
+  Withdrawal.cpp
+  Transaction.cpp
+  Screen.cpp
+  Keypad.cpp
+  DepositSlot.cpp
+  Deposit.cpp
+  CashDispenser.cpp
+  BankDatabase.cpp
+  BalanceInquiry.cpp
+  ATM.cpp
+  Account.cpp
+  Generating Code...
+ATM.obj : error LNK2019: unresolved external symbol "public: __thiscall ATM::ATM(void)" (??0ATM@@QAE@XZ) referenced in function _main
+ATM.obj : error LNK2019: unresolved external symbol "public: void __thiscall ATM::run(void)" (?run@ATM@@QAEXXZ) referenced in function _main
+Deposit.obj : error LNK2019: unresolved external symbol "private: double __thiscall Deposit::promptForDepositAmount(void)const " (?promptForDepositAmount@Deposit@@ABENXZ) referenced in function "public: virtual void __thiscall Deposit::execute(void)" (?execute@Deposit@@UAEXXZ)
+c:\users\mikeo\onedrive\documents\visual studio 2015\Projects\ATM\Debug\ATM.exe : fatal error LNK1120: 3 unresolved externals
