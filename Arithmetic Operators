@@ -1,0 +1,26 @@
+// ArithmeticOperators.cpp : Defines the entry point for the console application.
+//
+// Calculate the value of product and quotient.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	int x = 5;
+	int product = 5;
+	int quotient = 5;
+
+	// part a
+	product *= x++; // part a statement
+	cout << "Value of product after calculation: " << product << endl;
+	cout << "Value of x after calculation: " << x << endl << endl;
+
+	// part b
+	x = 5; // reset value of x
+	quotient /= ++x; // part b statement
+	cout << "Value of quotient after calculation: " << quotient << endl;
+	cout << "Value of x after calculation: " << x << endl << endl;
+	return 0; // indicate successful termination
+} // end main
