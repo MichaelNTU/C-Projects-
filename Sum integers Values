@@ -1,0 +1,25 @@
+// SumIntegers.cpp : Defines the entry point for the console application.
+//
+// Calculate the sum of the integers from 1 to 10.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	int sum; // stores sum of integers 1 to 10
+	int x; // counter
+
+	x = 1; // count from 1
+	sum = 0; // initialize sum
+
+	while (x <= 10) // loop 10 times
+	{
+		sum += x; // add x to sum
+		x++; // increment x
+	} // end while
+
+	cout << "The sum is: " << sum << endl;
+	return 0; // indicate successful termination
+} // end main
