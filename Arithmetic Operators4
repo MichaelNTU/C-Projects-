@@ -1,0 +1,21 @@
+// ArithmeticOperators4.cpp : Defines the entry point for the console application.
+//
+// What does this program print?
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	int count = 1; // initialize count
+
+	while (count <= 10) // loop 10 times
+	{
+		// output line of text
+		cout << (count % 2 ? "****" : "++++++++") << endl;
+		count++; // increment count
+	} // end while
+
+	return 0; // indicate successful termination
+} // end main
