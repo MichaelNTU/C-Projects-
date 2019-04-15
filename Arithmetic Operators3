@@ -1,0 +1,25 @@
+// ArithmeticOperators3.cpp : Defines the entry point for the console application.
+//
+// What does this program print?
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	int y; // declare y
+	int x = 1; // initialize x
+	int total = 0; // initialize total
+
+	while (x <= 10) // loop 10 times
+	{
+		y = x * x; // perform calculation
+		cout << y << endl; // output result
+		total += y; // add y to total
+		x++; // increment counter x
+	} // end while
+
+	cout << "Total is " << total << endl; // display result
+	return 0; // indicate successful termination
+} // end main
