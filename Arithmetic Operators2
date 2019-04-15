@@ -1,0 +1,35 @@
+// ArithmeticOperators2.cpp : Defines the entry point for the console application.
+//
+// Raise x to the y power. 
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main()
+{
+	int x; // base 
+	int y; // exponent
+	int i; // counts from 1 to y
+	int power; // used to calculate x raised to power y
+
+	i = 1; // initialize i to begin counting from 1
+	power = 1; // initialize power
+
+	cout << "Enter base as an integer: ";  // prompt for base
+	cin >> x; // input base
+
+	cout << "Enter exponent as an integer: "; // prompt for exponent
+	cin >> y; // input exponent
+
+			  // count from 1 to y and multiply power by x each time
+	while (i <= y)
+	{
+		power *= x;
+		i++;
+	} // end while
+
+	cout << power << endl; // display result
+	return 0; // indicate successful termination
+} // end main
