@@ -1,0 +1,18 @@
+// ForLoop.cpp : Defines the entry point for the console application.
+//
+// Counter-controlled repetition with the for statement.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	// for statement header includes initialization, 
+	// loop-continuation condition and increment. 
+	for (int counter = 1; counter <= 10; counter++)
+		cout << counter << " ";
+
+	cout << endl; // output a newline
+	return 0; // indicate successful termination
+} // end main
