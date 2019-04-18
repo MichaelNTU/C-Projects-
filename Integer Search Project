@@ -1,0 +1,72 @@
+// Test A.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+const int MAXMACHINES=7;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	double price[MAXMACHINES] = {155.0, 195.0, 650, 262, 299, 490, 525.0};
+	int stocknum[MAXMACHINES] = {2570, 1080, 4188, 4215, 3650, 3922, 6696};
+	double cheapest = 1000;
+	double highest = 0;
+	
+	cout<<"Sturk Basic   Price  Pice afterdilievery"<<endl;
+	
+	for(int a=0;a<MAXMACHINES;a++)
+	{
+		cout<<stocknum[a]<<"           ";
+		cout<<price[a]<<"        ";
+		if (cheapest > price[a])
+			{
+				cheapest = price[a];//Finding the lowest
+			}
+			if (highest < price[a])
+			{
+				highest = price[a];//Finding the highest
+			}
+
+		if (price[a] < 299)
+		{
+			price[a] = price[a] + 20;
+			cout<<price[a]<<endl;			
+		}
+		else if ((price[a] > 299)&&(price[a] < 500))
+		{
+			price[a] = price[a] + 10;
+			cout<<price[a]<<endl;
+		}
+		else 
+		{
+			cout<<price[a]<<endl;
+		}
+		//int sub();// calculating delievery cost
+		//price[a]= price[a]-stocknum[a];
+		//cout<<"             "<<"delivery cost"<<price[a]-stocknum[a]<<"="<<price[a]<<endl;
+
+		
+		//if(price[a]<299)
+		//{
+		//	int sub(price[a]); // calculating delievery cost
+		//	price[a]=price[a]-20;
+		//	cout<<price[a]<<endl;
+		//}
+		//else if((price[a]>299)&&(price[a]<500))
+		//{
+		//	price[a]=price[a]-10;
+		//	cout<<price[a]<<endl;
+		//}
+		//else
+		//	cout<<"                                        "<<price[a]<<endl;
+	
+
+	}
+	cout<<"The cheapest one is :  "<<cheapest<<endl;
+	cout<<"The most expensive is :  "<<highest<<endl;
+	
+	return 0;
+} 
