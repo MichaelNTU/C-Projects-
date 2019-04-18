@@ -1,0 +1,69 @@
+// testing code.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+const int NMAX =10;
+
+int _tmain(int argc, _TCHAR* argv[])
+{ 
+
+	double Numbers[NMAX] = {31.2, 29.7, 53.5, 69.0, 23.7, 71.8, 49.3, 52.9, 51.3, 57.1};
+	int counter =0;
+
+	for(int i =NMAX-1;i>0; i--)
+	{
+		for(int j=0;j<i;j++)
+		{
+			double tem;
+			counter++;
+		
+		if(Numbers[j]< Numbers[j+1])
+		{
+			tem = Numbers[j];
+			Numbers[j] = Numbers[j+1];
+			Numbers[j+1] = tem;
+			counter++;
+		}
+			
+		if(Numbers[j]!=Numbers[j+1])
+		{
+			tem = Numbers[j];
+			Numbers[j] = Numbers[j+1];
+			Numbers[j+1] = tem;
+			counter++;
+			//cout<<"True"<<"**"<<Numbers[j]<<"**"<<endl;
+	
+			//cout<<Numbers[j]<<" != "<<Numbers[j+1]<<endl;
+			
+		}
+	
+			/*if(Numbers[j]>Numbers[j+1])
+			{
+				cout<<"True"<<endl;
+			counter++;
+			}
+	*/
+		
+		
+			//cout<<" Numbers[i]>tem "<<Numbers[i]<<endl;
+		//if(Numbers[0]!=Numbers[1])
+			//cout<<"Numbers[0]!= Numbers[1]"<<" ="<<Numbers[0]<<endl;
+			//cout<<"*"<<" "<<Numbers[i]<<"*"<<endl;
+			 //counter++;
+			
+
+		
+		}
+	}
+	for(int i =0;i<NMAX;i++)
+	
+		
+		cout<<"True"<<"**"<<Numbers[i]<<"**"<<endl;
+		//cout<<"*"<<" "<<Numbers[i]<<endl;
+	
+
+	return 0;
+}
