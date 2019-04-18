@@ -1,0 +1,4 @@
+Brompton      SofaSeatingA        iPoddockings              10        185       
+GrandRoom     KingSizeBed         Flat-ScreenTV             20        200
+ClubRoom      SofaBeds             TVmultiChannel           30        210         
+Executive     DoubleBed            FlatScreenTV              40        230

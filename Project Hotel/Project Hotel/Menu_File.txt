@@ -1,0 +1,7 @@
+Sundayroast		        Hot			0001		2.50
+Faggots			        Hot			0002		5.00
+Fishandchips		        Hot			0003		4.00
+Cornsoup			Hot			0004		4.5  			
+Creamytomato                    Hot			0005		3.00
+
+	

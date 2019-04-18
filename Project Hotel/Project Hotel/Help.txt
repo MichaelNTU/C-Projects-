@@ -1,0 +1,13 @@
+Functional testing:
+This system is design to output list of Menus, Rooms, 
+make a reservation for room, 
+make an order for meal, and then display staff file. 
+And calculate wages and tax, 
+and then deduct the taxes from the wages. 
+And again display it on the screen both 
+monthly and annually net-wages and gross-wages. 
+This is for workers who are paid hourly. 
+The system   also can connect to the internet by pressing 4,
+for price comparison if costumer is not satisfied with 
+the available price, again, if the costumer wants to view 
+their booking on the screen press 5. 

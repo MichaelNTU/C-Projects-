@@ -1,0 +1,24 @@
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+Mike           Omoyibo         Brompton         Sundayroast        23
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+Mike           Omoyibo         Brompton         Sundayroast        45
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+Mike           Jimuel         Brompton         Faggots        23
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+Frank           Jimuel         GrandRoom         Faggots        67
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+mike           omoyibo         Brompton         Sundayroast        34
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+Michael           Omoyibo         Brompton         Sundayroast        34
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+Mike           Omoyibo         Brompton         Sundayroast        23
+*********BOOKING CONFIRMATION*********
+First_Name     Last_Name         Room_Type     Menu_Type          Age
+mike           Omoyibo         Brompton         Sundayroast        34
