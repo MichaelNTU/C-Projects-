@@ -1,0 +1,21 @@
+// DoWhileLoop.cpp : Defines the entry point for the console application.
+//
+// do...while repetition statement.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	int counter = 1; // initialize counter
+
+	do
+	{
+		cout << counter << " "; // display counter
+		counter++; // increment counter
+	} while (counter <= 10); // end do...while 
+
+	cout << endl; // output a newline
+	return 0; // indicate successful termination
+} // end main
