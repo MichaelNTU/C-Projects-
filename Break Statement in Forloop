@@ -1,0 +1,23 @@
+// BreakStatement.cpp : Defines the entry point for the console application.
+//
+// break statement exiting a for statement.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+	int count; // control variable also used after loop terminates
+
+	for (count = 1; count <= 10; count++) // loop 10 times
+	{
+		if (count == 5) // if count is 5,
+			break;         // terminate loop
+
+		cout << count << " ";
+	} // end for 
+
+	cout << "\nBroke out of loop at count = " << count << endl;
+	return 0; // indicate successful termination
+} // end main
