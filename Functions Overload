@@ -1,0 +1,30 @@
+// FunctionsOverload.cpp : Defines the entry point for the console application.
+//
+// Overloaded functions.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+// function square for int values
+int square(int x)
+{
+	cout << "square of integer " << x << " is ";
+	return x * x;
+} // end function square with int argument
+
+  // function square for double values
+double square(double y)
+{
+	cout << "square of double " << y << " is ";
+	return y * y;
+} // end function square with double argument
+
+int main()
+{
+	cout << square(7); // calls int version
+	cout << endl;
+	cout << square(7.5); // calls double version
+	cout << endl;
+	return 0; // indicates successful termination
+} // end main
