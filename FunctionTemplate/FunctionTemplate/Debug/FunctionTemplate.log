@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  FunctionTemplate.cpp
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\functiontemplate\functiontemplate\functiontemplate.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  FunctionTemplate.vcxproj -> c:\users\mikeo\onedrive\documents\visual studio 2015\Projects\FunctionTemplate\Debug\FunctionTemplate.exe
+  FunctionTemplate.vcxproj -> c:\users\mikeo\onedrive\documents\visual studio 2015\Projects\FunctionTemplate\Debug\FunctionTemplate.pdb (Full PDB)
