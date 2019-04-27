@@ -1,0 +1,30 @@
+// ArrayFunction2.cpp : Defines the entry point for the console application.
+// What does this program do?
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+void someFunction(int[], int, int); // function prototype
+
+int main()
+{
+	const int arraySize = 10;
+	int a[arraySize] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+	cout << "The values in the array are:" << endl;
+	someFunction(a, 0, arraySize);
+	cout << endl;
+
+	return 0; // indicates successful termination
+} // end main
+
+  // What does this function do?
+void someFunction(int b[], int current, int size)
+{
+	if (current < size)
+	{
+		someFunction(b, current + 1, size);
+		cout << b[current] << "  ";
+	} // end if
+} // end function someFunction
