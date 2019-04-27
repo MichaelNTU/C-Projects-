@@ -1,0 +1,34 @@
+// IterativeFactorialFunction.cpp : Defines the entry point for the console application.
+//
+// Testing the iterative factorial method.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <iomanip>
+using std::setw;
+
+unsigned long factorial(unsigned long); // function prototype
+
+int main()
+{
+	// calculate the factorials of 0 through 10
+	for (int counter = 0; counter <= 10; counter++)
+		cout << setw(2) << counter << "! = " << factorial(counter)
+		<< endl;
+
+	return 0;
+} // end main
+
+  // iterative method factorial
+unsigned long factorial(unsigned long number)
+{
+	unsigned long result = 1;
+
+	// iterative declaration of method factorial
+	for (unsigned long i = number; i >= 1; i--)
+		result *= i;
+
+	return result;
+} // end function factorial
