@@ -1,0 +1,33 @@
+// RecursiveFibonacciFunction.cpp : Defines the entry point for the console application.
+//
+// Testing the recursive fibonacci function.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+unsigned long fibonacci(unsigned long); // function prototype
+
+int main()
+{
+	// calculate the fibonacci values of 0 through 10
+	for (int counter = 0; counter <= 10; counter++)
+		cout << "fibonacci( " << counter << " ) = "
+		<< fibonacci(counter) << endl;
+
+	// display higher fibonacci values
+	cout << "fibonacci( 20 ) = " << fibonacci(20) << endl;
+	cout << "fibonacci( 30 ) = " << fibonacci(30) << endl;
+	cout << "fibonacci( 35 ) = " << fibonacci(35) << endl;
+	return 0; // indicates successful termination
+} // end main
+
+  // recursive method fibonacci
+unsigned long fibonacci(unsigned long number)
+{
+	if ((number == 0) || (number == 1)) // base cases
+		return number;
+	else // recursion step
+		return fibonacci(number - 1) + fibonacci(number - 2);
+} // end function fibonacci
