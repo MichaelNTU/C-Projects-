@@ -1,0 +1,30 @@
+// ArrayFunction.cpp : Defines the entry point for the console application.
+//
+// What does this program do?
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int whatIsThis(int[], int); // function prototype
+
+int main()
+{
+	const int arraySize = 10;
+	int a[arraySize] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+	int result = whatIsThis(a, arraySize);
+
+	cout << "Result is " << result << endl;
+
+	return 0; // indicates successful termination
+} // end main
+
+  // What does this function do?
+int whatIsThis(int b[], int size)
+{
+	if (size == 1) // base case
+		return b[0];
+	else // recursive step
+		return b[size - 1] + whatIsThis(b, size - 1);
+} // end function whatIsThis
