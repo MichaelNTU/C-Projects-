@@ -1,0 +1,12 @@
+// InitializedConstantVariable2.cpp : Defines the entry point for the console application.
+#include "stdafx.h"
+// A const variable must be initialized.
+
+int main()
+{
+	const int x; // Error: x must be initialized
+
+	x = 7; // Error: cannot modify a const variable
+
+	return 0; // indicates successful termination
+} // end main
