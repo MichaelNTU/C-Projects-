@@ -1,0 +1,30 @@
+// PointerFunctionChar.cpp : Defines the entry point for the console application.
+// What does this program do?
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+int mystery2(const char *); // prototype
+
+int main()
+{
+	char string1[80];
+
+	cout << "Enter a string: ";
+	cin >> string1;
+	cout << mystery2(string1) << endl;
+	return 0; // indicates successful termination
+} // end main
+
+  // What does this function do?
+int mystery2(const char *s)
+{
+	int x;
+
+	for (x = 0; *s != '\0'; s++)
+		++x;
+
+	return x;
+} // end function mystery2
