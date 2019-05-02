@@ -1,0 +1,26 @@
+// VariablePassByReference.cpp : Defines the entry point for the console application.
+// Cube a variable using pass-by-reference with a pointer argument.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+void cubeByReference(int *); // prototype
+
+int main()
+{
+	int number = 5;
+
+	cout << "The original value of number is " << number;
+
+	cubeByReference(&number); // pass number address to cubeByReference
+
+	cout << "\nThe new value of number is " << number << endl;
+	return 0; // indicates successful termination
+} // end main
+
+  // calculate cube of *nPtr; modifies variable number in main
+void cubeByReference(int *nPtr)
+{
+	*nPtr = *nPtr * *nPtr * *nPtr; // cube *nPtr
+} // end function cubeByReference
