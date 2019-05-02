@@ -1,0 +1,35 @@
+// LowercaseToUppercaseFunction.cpp : Defines the entry point for the console application.
+// Converting lowercase letters to uppercase letters
+// using a non-constant pointer to non-constant data.
+#include "stdafx.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <cctype> // prototypes for islower and toupper
+using std::islower;
+using std::toupper;
+
+void convertToUppercase(char *);
+
+int main()
+{
+	char phrase[] = "characters and $32.98";
+
+	cout << "The phrase before conversion is: " << phrase;
+	convertToUppercase(phrase);
+	cout << "\nThe phrase after conversion is:  " << phrase << endl;
+	return 0; // indicates successful termination
+} // end main
+
+  // convert string to uppercase letters
+void convertToUppercase(char *sPtr)
+{
+	while (*sPtr != '\0') // loop while current character is not '\0'
+	{
+		if (islower(*sPtr)) // if character is lowercase,
+			*sPtr = toupper(*sPtr); // convert to uppercase
+
+		sPtr++; // move sPtr to next character in string
+	} // end while
+} // end function convertToUppercase
