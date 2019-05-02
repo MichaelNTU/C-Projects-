@@ -1,0 +1,30 @@
+// FunctionPointerCharArray.cpp : Defines the entry point for the console application.
+// What does this program do?
+#include "stdafx.h";
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+bool mystery3(const char *, const char *); // prototype
+
+int main()
+{
+	char string1[80], string2[80];
+
+	cout << "Enter two strings: ";
+	cin >> string1 >> string2;
+	cout << "The result is " << mystery3(string1, string2) << endl;
+	return 0; // indicates successful termination
+} // end main
+
+  // What does this function do?
+bool mystery3(const char *s1, const char *s2)
+{
+	for (; *s1 != '\0' && *s2 != '\0'; s1++, s2++)
+
+		if (*s1 != *s2)
+			return false;
+
+	return true;
+} // end function mystery3
