@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  DeckOfCards.cpp
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\cardgame\cardgame\deckofcards.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  CardGame.cpp
+  Generating Code...
+  CardGame.vcxproj -> c:\users\mikeo\onedrive\documents\visual studio 2015\Projects\CardGame\Debug\CardGame.exe
+  CardGame.vcxproj -> c:\users\mikeo\onedrive\documents\visual studio 2015\Projects\CardGame\Debug\CardGame.pdb (Full PDB)
