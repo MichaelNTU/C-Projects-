@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  Time.cpp
+  AccessConstObjectWithNonconstObject.cpp
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject.cpp(14): error C2662: 'void Time::setHour(int)': cannot convert 'this' pointer from 'const Time' to 'Time &'
+  c:\users\mikeo\onedrive\documents\visual studio 2015\projects\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject.cpp(14): note: Conversion loses qualifiers
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject.cpp(21): error C2662: 'void Time::printStandard(void)': cannot convert 'this' pointer from 'const Time' to 'Time &'
+  c:\users\mikeo\onedrive\documents\visual studio 2015\projects\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject\accessconstobjectwithnonconstobject.cpp(21): note: Conversion loses qualifiers
+  Generating Code...
