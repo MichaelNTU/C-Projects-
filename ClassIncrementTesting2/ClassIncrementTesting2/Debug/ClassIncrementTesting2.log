@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  Increment.cpp
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\classincrementtesting2\classincrementtesting2\increment.cpp(12): error C2789: 'Increment::increment': an object of const-qualified type must be initialized
+  c:\users\mikeo\onedrive\documents\visual studio 2015\projects\classincrementtesting2\classincrementtesting2\increment.h(20): note: see declaration of 'Increment::increment'
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\classincrementtesting2\classincrementtesting2\increment.cpp(14): error C2166: l-value specifies const object
+  ClassIncrementTesting2.cpp
+  Generating Code...
