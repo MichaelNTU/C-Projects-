@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  StringClassAndFunctions.cpp
+  String.cpp
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\stringclassandfunctions\stringclassandfunctions\string.cpp(67): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\stringclassandfunctions\stringclassandfunctions\string.cpp(68): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\stringclassandfunctions\stringclassandfunctions\string.cpp(143): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(346): note: see declaration of 'strncpy'
+c:\users\mikeo\onedrive\documents\visual studio 2015\projects\stringclassandfunctions\stringclassandfunctions\string.cpp(164): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+  Generating Code...
